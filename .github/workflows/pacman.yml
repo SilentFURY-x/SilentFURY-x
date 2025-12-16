@@ -1,17 +1,16 @@
-name: Generate Pacman Graph
+name: Generate Pac-Man Graph
 
 on:
   # Run automatically every 24 hours
   schedule:
     - cron: "0 0 * * *" 
   
-  # Allows you to run this workflow manually from the Actions tab
+  # Allows you to run it manually from the Actions tab for testing
   workflow_dispatch:
   
-  # Run on every push to the master branch
+  # Run on every push on the master branch
   push:
     branches:
-    - master
     - main
 
 jobs:
@@ -19,21 +18,18 @@ jobs:
     permissions: 
       contents: write
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     
     steps:
-      # Generates the graph with the specific "pacman" filenames
-      - name: generate-pacman-graph
-        uses: Platane/snk/svg-only@v3
+      # Generates the Pac-Man graph from your contributions
+      - name: generate-github-profile-summary-cards
+        uses: k-8/github-readme-pacman@master
         with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/pacman-contribution-graph.svg
-            dist/pacman-contribution-graph-dark.svg?palette=github-dark
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
-      # Pushes the generated svg to the output branch
+          username: ${{ github.repository_owner }}
+          # This is the token. See Step 2 below if you have private commits!
+          github_token: ${{ secrets.GITHUB_TOKEN }} 
+
+      # Pushes the generated SVG file to the "output" branch
       - name: push to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
