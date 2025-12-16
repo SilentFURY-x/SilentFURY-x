@@ -80,8 +80,6 @@
 
 <br clear="both">
 
-<img src="https://raw.githubusercontent.com/SilentFURY-x/SilentFURY-x/output/snake.svg" alt="Snake animation" />
-
 ###
 
 <picture>
