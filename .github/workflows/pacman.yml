@@ -21,16 +21,21 @@ jobs:
     timeout-minutes: 10
     
     steps:
-      # Generates the Pac-Man graph from your contributions
-      - name: generate-github-profile-summary-cards
+      # This step checks out your code so the action can access it
+      - uses: actions/checkout@v3
+
+      # This step generates the Pac-Man SVG
+      - name: Generate Pac-Man
         uses: k-8/github-readme-pacman@master
         with:
-          username: ${{ github.repository_owner }}
-          # This is the token. See Step 2 below if you have private commits!
+          username: SilentFURY-x
+          # IMPORTANT: If you want to count private commits (fruits), 
+          # you must create a Personal Access Token (PAT) and use it here.
+          # Otherwise, use ${{ secrets.GITHUB_TOKEN }} for public only.
           github_token: ${{ secrets.GITHUB_TOKEN }} 
 
-      # Pushes the generated SVG file to the "output" branch
-      - name: push to output branch
+      # This step pushes the generated SVG to your 'output' branch
+      - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
