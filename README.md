@@ -2,7 +2,7 @@
 
 ###
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=SilentFURY-x&show_icons=true&theme=dracula&hide_border=false" height="150" alt="stats graph" />
+  <img src="https://streak-stats.demolab.com?user=SilentFURY-x&theme=dracula&hide_border=false" height="150" alt="streak graph" />
   <img src="https://github-readme-stats.vercel.app/api/top-langs?username=SilentFURY-x&layout=compact&langs_count=6&theme=dracula&hide_border=false" height="150" alt="languages graph" />
 </div>
 
