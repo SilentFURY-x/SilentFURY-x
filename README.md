@@ -1,4 +1,8 @@
-<h2 align="left">Hi peeps! My name is Arjun Tyagi and I'm a Computer Science Undergraduate, from India</h2>
+<h1 align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=BD93F9&center=true&vCenter=true&width=435&lines=Hi+Peeps!+I'm+Arjun+Tyagi;Android+Developer+(Kotlin);Web+Developer+(React);CS+Undergrad+@+VIT" alt="Typing SVG" />
+  </a>
+</h1>
 
 ###
 <div align="center">
